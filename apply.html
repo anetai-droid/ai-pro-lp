@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お申し込み｜AIプロ用コンテンツ</title>
+  <meta name="description" content="福祉×AI 業務削減ツールのお申し込みフォーム。クレジット決済・銀行振込に対応。">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .apply-form { display: grid; gap: 18px; margin-top: 8px; }
+    .apply-form .field { display: grid; gap: 6px; }
+    .apply-form label.lbl { font-weight: 800; }
+    .apply-form .req { color: #e23b3b; font-size: 13px; }
+    .apply-form input[type="text"] {
+      width: 100%; padding: 12px 14px; border: 1px solid var(--line);
+      border-radius: 8px; font-size: 16px; background: #fff;
+    }
+    .apply-form input[type="text"]:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+    .apply-form small { color: var(--muted); font-size: 13px; }
+    .apply-form .radios { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+    .apply-form .radios label { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
+    .apply-form .price-line { font-size: 22px; font-weight: 900; color: var(--blue-dark); margin: 4px 0 0; }
+    .apply-form .agree-note { font-size: 13px; color: var(--muted); }
+    .apply-form button.submit { border: 0; cursor: pointer; }
+    .order-summary { background: #f6fbff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 6px; }
+    .order-summary strong { color: var(--blue-dark); }
+  </style>
+</head>
+<body class="legal-page">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>AIプロ用コンテンツ</span></a>
+    <nav class="site-nav" aria-label="主要メニュー">
+      <a href="index.html">LPに戻る</a>
+      <a href="trial.html">無料体験</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-card">
+      <p class="section-kicker">お申し込み</p>
+      <h1>福祉×AI 業務削減ツールのお申し込み</h1>
+      <p>必要事項をご入力ください。お支払いはクレジット決済・銀行振込に対応しています。</p>
+
+      <div class="order-summary">
+        <p style="margin:0;">お申込内容：<strong>福祉×AI 業務削減ツール（事業所版）</strong><br>料金：<strong>165,000円（税込）</strong></p>
+      </div>
+
+      <!-- ▼ オートビズ（76auto.biz）への送信フォーム。hidden項目・name属性は変更しないこと ▼ -->
+      <form action="https://76auto.biz/nfja/responder.php" method="post" enctype="multipart/form-data" class="apply-form">
+        <input type="hidden" name="mcode" value="UTF-8">
+        <input type="hidden" name="tno" value="74">
+        <input type="hidden" name="spflg" value="1">
+        <input type="hidden" name="fld4" value="165000">
+        <input type="hidden" name="rgst" value="entry">
+
+        <div class="field">
+          <label class="lbl">お名前 <span class="req">必須</span></label>
+          <input type="text" name="name1" required placeholder="例：山田 太郎">
+        </div>
+        <div class="field">
+          <label class="lbl">フリガナ <span class="req">必須</span></label>
+          <input type="text" name="name2" required placeholder="例：ヤマダ タロウ">
+        </div>
+        <div class="field">
+          <label class="lbl">メールアドレス <span class="req">必須</span></label>
+          <input type="text" name="email" required placeholder="例：info@example.com">
+          <small>ご案内はこのアドレス宛にお送りします。入力間違いにご注意ください。</small>
+        </div>
+        <div class="field">
+          <label class="lbl">電話番号 <span class="req">必須</span></label>
+          <input type="text" name="fld1" required placeholder="例：03-1234-5678">
+        </div>
+        <div class="field">
+          <label class="lbl">お申込内容</label>
+          <div class="radios">
+            <label><input type="radio" name="fld3" value="福祉×AI 業務削減ツール" checked> 福祉×AI 業務削減ツール</label>
+          </div>
+          <p class="price-line">165,000円（税込）</p>
+        </div>
+        <div class="field">
+          <label class="lbl">お支払い方法 <span class="req">必須</span></label>
+          <div class="radios">
+            <label><input type="radio" name="fld5" value="クレジット決済" required> クレジット決済</label>
+            <label><input type="radio" name="fld5" value="銀行振込"> 銀行振込</label>
+          </div>
+        </div>
+
+        <p class="agree-note">お申し込みをもって、<a href="terms.html">利用規約</a>および<a href="tokushoho.html">特定商取引法に基づく表記</a>に同意いただいたものといたします。デジタルコンテンツのため、提供開始後の返金は原則お受けできません。</p>
+
+        <div>
+          <button type="submit" name="sbm" value="登録" class="button primary submit">申し込む</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">トップ</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+    </div>
+    <p>© 2026 一般社団法人日本福祉事業者協会 / AIプロ用コンテンツ</p>
+  </footer>
+</body>
+</html>
