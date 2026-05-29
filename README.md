@@ -1,3 +1,7 @@
+# Public Page
+
+https://anetai-droid.github.io/ai-pro-lp/
+
 # ai-pro-lp — AIプロ用コンテンツ 販売LP / 体験版 / 法務ページ（GitHub Pages）
 
 介護・障害福祉の事業所向け「AIプロ用コンテンツ」の**販売LP・無料体験・法務ページ**一式。
