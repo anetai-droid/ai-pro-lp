@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>無料体験｜個別支援計画のたたき台をAIで作る流れ</title>
-  <meta name="description" content="架空事例を使って、個別支援計画のたたき台をAIで整理する流れを体験できます。有料レシピ本文や実在の利用者情報は含みません。">
+  <title>無料体験｜個別支援計画 たたき台生成ドリル</title>
+  <meta name="description" content="レシピNo.01 個別支援計画 たたき台生成の流れを、匿名化した架空ケースで体験できます。">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="trial-page">
@@ -13,68 +13,108 @@
     <nav class="site-nav" aria-label="主要メニュー">
       <a href="index.html">LPに戻る</a>
       <a href="#sample">体験内容</a>
-      <a class="nav-button" href="apply.html">お申し込み</a>
+      <a href="#output">出力例</a>
+      <a class="nav-button" href="index.html#price">お申し込み</a>
     </nav>
   </header>
 
-  <main class="page-shell">
-    <section class="page-card">
-      <p class="section-kicker">無料体験</p>
-      <h1>個別支援計画の「たたき台」を、AIでどう作るか。</h1>
-      <p>ここでは架空事例を使って、サビ管の記録業務がどう整理されるかを見せます。本物の25レシピ本文、実在の利用者情報、購入者向けポータルの中身は公開しません。</p>
+  <main class="page-shell trial-shell">
+    <section class="page-card trial-hero-card">
+      <p class="section-kicker">無料体験 / レシピNo.01</p>
+      <h1>個別支援計画の「たたき台」を、AIで作る流れを体験する。</h1>
+      <p>購入者版ドリル「個別支援計画 たたき台生成GPT/Gem」に準拠した体験ページです。匿名化した架空ケースを使い、入力情報から長期目標・短期目標・支援内容の素案を作る流れを確認できます。</p>
+      <div class="metric-strip" aria-label="削減効果の目安">
+        <div><span>Before</span><strong>60〜90分</strong><small>1件のたたき台作成</small></div>
+        <div><span>After</span><strong>20〜30分</strong><small>AI出力の確認・修正へ集中</small></div>
+      </div>
     </section>
 
     <div class="notice">
-      体験版は「価値を確認するためのデモ」です。実際の支援計画は、必ず担当者が事実確認・修正・最終判断を行ってください。
+      このページは体験版です。実在する利用者情報は入力しないでください。AIの出力は完成品ではなく、必ず職員が事実確認・修正・本人家族への説明を行ってください。
     </div>
 
     <section class="section page-card" id="sample">
-      <p class="section-kicker">Before</p>
-      <h2>手作業だと、情報の整理から文章化まで時間がかかる。</h2>
-      <p>例：就労継続支援B型を利用する架空のAさん。作業への意欲はあるが、体調の波があり、休憩のタイミングや声かけの工夫が必要。</p>
-      <div class="fake-document">
-        <span></span><span></span><span></span><span></span>
+      <p class="section-kicker">STEP 1 / 匿名化した入力情報</p>
+      <h2>まず、計画作成に必要な情報を同じ型で整理します。</h2>
+      <p>ドリルでは、毎回貼り付ける入力情報を「事業種別・利用者概要・本人家族の意向・現在の状況・課題・前回計画の達成状況・配慮事項」に揃えます。</p>
+      <div class="sample-input">
+        <dl>
+          <div><dt>事業種別</dt><dd>就労継続B型</dd></div>
+          <div><dt>利用者の概要</dt><dd>50代男性、精神障害、障害支援区分2</dd></div>
+          <div><dt>本人の希望</dt><dd>週3回は安定して通所したい。静かな環境で作業したい。</dd></div>
+          <div><dt>家族の希望</dt><dd>生活リズムを整え、体調悪化なく通ってほしい。</dd></div>
+          <div><dt>現在の状況</dt><dd>昼夜逆転気味。通所は週2回程度。作業の集中に波がある。</dd></div>
+          <div><dt>課題</dt><dd>体調の波、対人不安、欠席連絡が遅れることがある。</dd></div>
+          <div><dt>配慮事項</dt><dd>強い口調での声かけに不安が高まりやすい。</dd></div>
+        </dl>
       </div>
     </section>
 
     <section class="section page-card">
-      <p class="section-kicker">AIへの依頼例</p>
-      <h2>匿名化した要点だけを渡して、たたき台を作る。</h2>
-      <div class="notice">
-        あなたは就労継続支援B型のサービス管理責任者です。以下の架空事例をもとに、個別支援計画のたたき台を「長期目標・短期目標・具体的支援・留意点」に分けて作成してください。断定せず、担当者が確認しやすい表現にしてください。
+      <p class="section-kicker">STEP 2 / AIへの依頼文</p>
+      <h2>入力情報にない事実を足させず、確認しやすい形で出力させます。</h2>
+      <div class="prompt-demo">
+        <p>あなたは就労継続B型のサービス管理責任者を補助するAIアシスタントです。上記の入力情報をもとに、個別支援計画書のたたき台を作成してください。</p>
+        <ul>
+          <li>総合的な援助の方針を200〜300字程度で作る</li>
+          <li>長期目標はおおむね1年、短期目標は3〜6ヶ月で整理する</li>
+          <li>各短期目標に対して、支援内容・担当職種・留意事項を出す</li>
+          <li>入力にない事実は追加しない。不足情報は最後に確認事項として列挙する</li>
+          <li>実名・生年月日・住所・電話番号が含まれる場合は処理を止める</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section page-card">
-      <p class="section-kicker">After</p>
-      <h2>下書きができると、確認と修正に集中できる。</h2>
-      <div class="problem-grid">
+    <section class="section page-card" id="output">
+      <p class="section-kicker">STEP 3 / 出力イメージ</p>
+      <h2>AIの下書きを、職員が確認・修正する前提で使います。</h2>
+      <div class="problem-grid output-grid">
         <article>
           <span>1</span>
-          <h3>長期目標</h3>
-          <p>体調と相談しながら、自分のペースで作業を継続し、得意な軽作業を活かして役割を広げる。</p>
+          <h3>総合的な援助の方針</h3>
+          <p>本人の希望である週3回の安定通所を目指し、体調の波と対人不安に配慮しながら、無理のない作業参加を支援する。</p>
         </article>
         <article>
           <span>2</span>
-          <h3>短期目標</h3>
-          <p>週の作業リズムを整え、疲れを感じた時に早めに相談・休憩できるようにする。</p>
+          <h3>長期目標</h3>
+          <p>生活リズムを整え、体調に合わせて相談・休憩しながら、安定した通所と作業継続につなげる。</p>
         </article>
         <article>
           <span>3</span>
-          <h3>支援内容</h3>
-          <p>作業量を小分けにし、手順書と声かけで見通しを持てるよう支援する。</p>
+          <h3>短期目標</h3>
+          <p>3ヶ月以内に欠席連絡の手順を確認し、週2〜3回の通所リズムを職員と一緒に整える。</p>
         </article>
       </div>
-      <p class="micro-note">実務では、この後に担当者が本人の意向・事実関係・制度上の表現を確認して仕上げます。</p>
+      <div class="support-plan">
+        <h3>支援内容の例</h3>
+        <ul>
+          <li>生活支援員が体調確認を行い、疲労感が強い日は休憩を促す。</li>
+          <li>職業指導員が作業量を小分けにし、見通しを持てる声かけを行う。</li>
+          <li>欠席連絡の方法を本人と確認し、遅れた場合も責めずに次回の手順を整理する。</li>
+        </ul>
+      </div>
+      <p class="micro-note">これは架空ケースの出力例です。実務では、本人の意向・家族の意向・制度上の表現・事業所様式に合わせて職員が必ず修正します。</p>
+    </section>
+
+    <section class="section page-card">
+      <p class="section-kicker">ドリルの進め方</p>
+      <h2>購入者版では、自施設向けに使える状態まで調整します。</h2>
+      <div class="drill-flow">
+        <div><span>01</span><strong>雛形そのまま試運転</strong><p>匿名化した過去データで出力傾向と所要時間を確認。</p></div>
+        <div><span>02</span><strong>違和感の洗い出し</strong><p>表現、項目、粒度のズレを3つ以上書き出す。</p></div>
+        <div><span>03</span><strong>プロンプト修正</strong><p>ルールや出力形式を1〜2か所ずつ直して比較。</p></div>
+        <div><span>04</span><strong>3件で安定化</strong><p>匿名化した実データ3件で再現性と修正時間を計測。</p></div>
+        <div><span>05</span><strong>入力ガイド作成</strong><p>他職員と試し、入力手順をA4 1枚にまとめる。</p></div>
+      </div>
     </section>
 
     <section class="apply-band">
       <div>
         <p class="section-kicker">次のステップ</p>
         <h2>全25レシピを事業所に導入する。</h2>
-        <p>お支払いはクレジット決済・銀行振込に対応しています。</p>
+        <p>職員向け15レシピ、利用者向け10レシピ、匿名化チェックリスト、進捗管理、実証データ集計に対応しています。</p>
       </div>
-      <a class="button white" href="apply.html">お申し込みはこちら</a>
+      <a class="button white" href="index.html#price">申し込みフォームへ</a>
     </section>
   </main>
 
