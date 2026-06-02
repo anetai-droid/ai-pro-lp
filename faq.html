@@ -108,6 +108,43 @@
             </ul>
           </div>
         </details>
+        <details class="faq-item">
+          <summary>カスタムチャット（Gem／カスタムGPT）はどうやって作りますか？</summary>
+          <div class="faq-body">
+            <p>各レシピに貼り付け用の指示文（プロンプト）が用意されているので、それを<strong>コピーして貼り付けるだけ</strong>です。作り方の流れは次のとおりです。</p>
+            <p><strong>Gemini（Gem）の場合</strong></p>
+            <ol>
+              <li>Gemini（gemini.google.com）を開く</li>
+              <li>左メニューの<strong>「Gem マネージャー」→「新しい Gem」</strong>を開く</li>
+              <li>名前を付け、「<strong>手順（指示）</strong>」欄にレシピのプロンプトを貼り付ける</li>
+              <li>右側のプレビューで試し、問題なければ<strong>「保存」</strong></li>
+              <li>次回からは左メニューの一覧から、そのGemを選んで使います</li>
+            </ol>
+            <p><strong>ChatGPT（カスタムGPT）の場合</strong>（Plus／Team／Enterpriseが必要）</p>
+            <ol>
+              <li>ChatGPT（chatgpt.com）を開く</li>
+              <li>左サイドバーの<strong>「GPT」→「＋ 作成する」</strong>を開く</li>
+              <li><strong>「構成（Configure）」タブ</strong>で名前と「<strong>指示（Instructions）</strong>」にレシピのプロンプトを貼り付ける</li>
+              <li>右上の<strong>「作成する」→ 公開範囲は「自分だけ」</strong>を選んで保存</li>
+              <li>次回からは左メニューのGPT一覧から選んで使います</li>
+            </ol>
+            <p>画面の文言やボタン位置は更新されることがあります。迷ったらレシピ本文の手順とあわせてご確認ください。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>GASのスクリプトはどこから開きますか？（スプレッドシート式）</summary>
+          <div class="faq-body">
+            <p>GAS編は、対象の<strong>Googleスプレッドシートからスクリプト編集画面を開きます</strong>。手順は次のとおりです。</p>
+            <ol>
+              <li>対象の<strong>Googleスプレッドシートを開く</strong>（テンプレートがある場合は自分のドライブにコピーしてから）</li>
+              <li>上部メニューの<strong>「拡張機能」→「Apps Script」</strong>をクリック</li>
+              <li>新しいタブで<strong>スクリプトエディタ</strong>が開く</li>
+              <li>レシピのコードを貼り付け、<strong>保存（💾 または Ctrl+S）</strong></li>
+              <li><strong>「実行」</strong>ボタンを押す。初回だけ<strong>権限の承認</strong>画面が出るので、自分のGoogleアカウントを選び「許可」</li>
+            </ol>
+            <p>承認画面で「このアプリは確認されていません」と出ることがありますが、<strong>自分が貼り付けたコードを自分のシートで動かす</strong>ためのものです。内容を確認のうえ進めてください。シート構成・通知先は自施設に合わせ、職員が必ず動作確認を行ってください。</p>
+          </div>
+        </details>
       </div>
     </section>
 
