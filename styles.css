@@ -1537,6 +1537,145 @@ textarea:focus {
   font-size: 14px;
 }
 
+.faq-teaser-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.faq-teaser {
+  margin: 0 auto;
+  border-left: 7px solid var(--yellow);
+}
+
+.faq-teaser a {
+  color: var(--ink);
+  background: var(--yellow);
+}
+
+/* FAQ page */
+.faq-shell {
+  max-width: 920px;
+}
+
+.faq-hero-card {
+  border-top: 6px solid var(--blue);
+}
+
+.faq-hero-card h1 {
+  margin-bottom: 14px;
+}
+
+.faq-section {
+  max-width: none;
+  padding: 30px;
+}
+
+.faq-section > .section-kicker {
+  margin-bottom: 8px;
+}
+
+.faq-section h2 {
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+  font-size: clamp(22px, 2.6vw, 30px);
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--blue);
+  background: var(--base-white);
+}
+
+.faq-item summary {
+  position: relative;
+  list-style: none;
+  padding: 16px 52px 16px 18px;
+  color: var(--ink);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary:hover {
+  background: rgba(217, 232, 243, .42);
+}
+
+.faq-item summary:focus-visible {
+  outline: 3px solid rgba(35, 111, 186, .28);
+  outline-offset: -3px;
+}
+
+.faq-item summary::before {
+  content: "Q";
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: -6px;
+  color: var(--paper);
+  background: var(--blue);
+  border-radius: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.faq-item summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--blue-2);
+  border-bottom: 2px solid var(--blue-2);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .18s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: translateY(-30%) rotate(225deg);
+}
+
+.faq-body {
+  padding: 4px 18px 18px;
+  border-top: 1px solid var(--line);
+}
+
+.faq-body p,
+.faq-body li {
+  color: var(--ink-2);
+}
+
+.faq-body p:first-child {
+  margin-top: 14px;
+}
+
+.faq-body p:last-child,
+.faq-body ul:last-child,
+.faq-body ol:last-child {
+  margin-bottom: 0;
+}
+
+.faq-body ul,
+.faq-body ol {
+  padding-left: 1.3em;
+}
+
+.faq-body a {
+  color: var(--blue);
+  font-weight: 900;
+}
+
 @media (max-width: 900px) {
   .site-header {
     position: static;
