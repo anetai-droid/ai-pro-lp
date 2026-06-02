@@ -966,6 +966,53 @@ p {
   line-height: 1.45;
 }
 
+.notebook-panel {
+  max-width: var(--container);
+  margin: 18px auto 0;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  color: var(--paper);
+  background: var(--ink);
+  border-left: 7px solid var(--green);
+}
+
+.notebook-panel .section-kicker {
+  margin-bottom: 8px;
+  color: var(--cyan);
+}
+
+.notebook-panel h3 {
+  margin: 0 0 8px;
+  color: var(--paper);
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.35;
+}
+
+.notebook-panel p {
+  margin: 0;
+  color: rgba(255, 255, 255, .82);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.notebook-panel a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 11px 16px;
+  color: var(--ink);
+  background: var(--yellow);
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 .value-card ul,
 .price-card ul {
   padding-left: 1.2em;
@@ -1528,6 +1575,7 @@ textarea:focus {
   .intro-layout,
   .about-layout,
   .about-main,
+  .notebook-panel,
   .requirements-inner,
   .price-card,
   .trial-panel,
